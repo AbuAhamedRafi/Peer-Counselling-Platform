@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/form-validation.js"></script>
+
+    <title>Administration</title>
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-shrink-0 p-3 wide-sidebar sidebar">
+        <h1>
+            <a href="home.html"><img src="images/icons/left-arrow.png" alt="go-back"></a>
+            Administration
+            <hr>
+        </h1>
+        <nav>
+            <ul class="nav nav-pills sidebar-list mb-auto flex-column" id="myTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="personal-dashboard-tab" data-bs-toggle="tab"
+                        data-bs-target="#personal-dashboard" type="button" role="tab" aria-controls="personal-dashboard"
+                        aria-selected="true">
+                        <img src="images/user-images/admin-profile-picture.jpg" alt="profile-picture">
+                        Personal Dashboard
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="report-management-tab" data-bs-toggle="tab"
+                        data-bs-target="#report-management" type="button" role="tab" aria-controls="report-management"
+                        aria-selected="false">
+                        <img src="images/icons/report.png" alt="report-icon">
+                        Report Management
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="leave-application-tab" data-bs-toggle="tab"
+                        data-bs-target="#leave-application" type="button" role="tab" aria-controls="leave-application"
+                        aria-selected="false">
+                        <img src="images/icons/leave-application.png" alt="leave-application-icon">
+                        Leave Applications
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="questionnaire-management-tab" data-bs-toggle="tab"
+                        data-bs-target="#questionnaire-management" type="button" role="tab"
+                        aria-controls="questionnaire-management" aria-selected="false">
+                        <img src="images/icons/questionnaire.png" alt="leave-application-icon">
+                        Questionnaire Management
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-link" id="client-management-tab" data-bs-toggle="tab"
+                        data-bs-target="#client-management" type="button" role="tab" aria-controls="client-management"
+                        aria-selected="false">
+                        <img src="images/icons/client-management.png" alt="client-management-icon">
+                        Client Management
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-link" id="volunteer-management-tab" data-bs-toggle="tab"
+                        data-bs-target="#volunteer-management" type="button" role="tab"
+                        aria-controls="volunteer-management" aria-selected="false">
+                        <img src="images/icons/volunteer-management.png" alt="volunteer-management-icon">
+                        Volunteer Management
+                    </button>
+                </li>
+                <li>
+                    <button class="nav-link" id="system-statistics-tab" data-bs-toggle="tab"
+                        data-bs-target="#system-statistics" type="button" role="tab" aria-controls="system-management"
+                        aria-selected="false">
+                        <img src="images/icons/statistics.png" alt="statistics-icon">
+                        System Statistics
+                    </button>
+                </li>
+            </ul>
+        </nav>
+        <!-- aside inside sidebar -->
+        <div class="sidebar-footer dropdown">
+            <hr>
+            <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+                id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!--
+            #####################################################
+            ############  PERSONAL DASHBOARD TAB ################
+            #####################################################
+            -->
+            <section class="tab-pane active" id="personal-dashboard" role="tabpanel"
+                aria-labelledby="personal-dashboard-tab">
+                <img src="images/icons/volunteer-management.png" alt="volunteer-management-icon">
+                <img src="images/icons/volunteer-management.png" alt="volunteer-management-icon">
+                <img src="images/icons/volunteer-management.png" alt="volunteer-management-icon">
+                <img src="images/icons/volunteer-management.png" alt="volunteer-management-icon">
+                <img src="images/icons/volunteer-management.png" alt="volunteer-management-icon">
+                <img src="images/icons/volunteer-management.png" alt="volunteer-management-icon">
+                <img src="images/icons/volunteer-management.png" alt="volunteer-management-icon">
+                <img src="images/icons/volunteer-management.png" alt="volunteer-management-icon">
+
+            </section>
+            <!--
+            #####################################################
+            #############  REPORT MANAGEMENT TAB ################
+            #####################################################
+            -->
+            <section class="tab-pane" id="report-management" role="tabpanel" aria-labelledby="report-management-tab">
+                <section class="w-75 min-vh-75 px-5 py-2" id="reportManager">
+                    <h1 class="text-center py-3">Reports Management</h1>
+                    <div class="table-responsive">
+                        <table class="table table-success caption-top table-striped table-hover">
+                            <caption>Pending Reports</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Reported by</th>
+                                    <th scope="col">Volunteer</th>
+                                    <th scope="col">Client</th>
+                                    <th scope="col">Reason(s) Cited</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-primary" role="button" data-bs-toggle="modal" data-bs-target="#report1">
+                                    <th scope="row">1</th>
+                                    <td>27th April 2022 at 12:00PM <span class="badge bg-danger ps-1">New</span></td>
+                                    <td>Chat Moderator AI</td>
+                                    <td>Real Volunteer Name</td>
+                                    <td>Anomymous Client Username</td>
+                                    <td>Sent inappropriate material</td>
+                                </tr>
+                                <tr role="button" data-bs-toggle="modal" data-bs-target="#report2">
+                                    <th scope="row">2</th>
+                                    <td>23rd April, 2022 11:00PM</td>
+                                    <td>Client</td>
+                                    <td>Another Volunteer Name</td>
+                                    <td>Some Other Client</td>
+                                    <td>Inconsiderate/Rude, Triggered a trauma </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>21st April 2022 05:40PM</td>
+                                    <td>Volunteer</td>
+                                    <td>Real Volunteer Name</td>
+                                    <td>Anomymous Client Username</td>
+                                    <td>Fake Account</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>10th April 2022 12:15PM</td>
+                                    <td>Chat Moderator AI</td>
+                                    <td>Some Other Volunteer</td>
+                                    <td>An Anomymous Client</td>
+                                    <td>Sent inappropriate material</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-muted">Click to view report details</caption>
+                    </div>
+                </section>
+        
+                <div class="modal fade  border-rounded" id="report1" tabindex="-1" aria-labelledby="report1Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
+            
+                        <div class="modal-content px-5 py-3">
+                            <div class="modal-header">
+                                <div>
+                                    <h5 class="modal-title" id="report1Label">AI-flagged Report Details</h5>
+                                    <h6 class="m-0 text-muted">Client: Anonymous Client Name<br>Volunteer: Real Volunteer Name</h6>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+            
+                            <div class="modal-body">
+                                <div class="container">
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Timestamp</th>
+                                            <th scope="col">Censor Log Entry</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>12th April 2022 at 11:24PM</td>
+                                                <td>censored image of "violence-gore" (73% confidence level)</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>12th April 2022 at 11:24PM</td>
+                                                <td>...</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">..</th>
+                                                <td>...</td>
+                                                <td>...</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>27th April 2022 at 12:00PM</td>
+                                                <td>censored image of "violence-gore" (94% confidence level)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="text-center py-3">
+                                    <button class="btn btn-danger">Request Chat Access</button>
+                                    <br><small class="text-muted">(Button changes to "View Chat log" once access is granted)</small>
+                                </div>
+                            </div>
+            
+                            <div class="modal-footer mt-5">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary px-4">  Handle this report  </button>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+        
+                <div class="modal fade border-rounded" id="report2" tabindex="-1" aria-labelledby="report2Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-xl modal-dialog-centered">
+            
+                        <div class="modal-content px-5 py-3">
+                            <div class="modal-header">
+                                <div>
+                                    <h5 class="modal-title" id="report2Label">Client-flagged Report Details</h5>
+                                    <h6 class="m-0 text-muted">Client: Some Other Client<br>Volunteer: Another Volunteer Name</h6>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+            
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <form action="#">
+                                            <div class="row mb-4">
+                                                <label for="" class="form-check-label mb-2">Reasons Cited</label>
+        
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox0" checked disabled>
+                                                    <label class="form-check-label" for="inlineCheckbox0">Triggered a trauma</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" checked disabled>
+                                                    <label class="form-check-label" for="inlineCheckbox2">Inconsiderate/Rude</label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">Take a moment to tell us about the issue</label>
+                                                
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" disabled
+                                                >This happened and that happened and that was not supposed to happened.</textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">How do you wish this situation to be resolved?</label>
+                                                
+                                                <textarea class="form-control" id="exampleFormControlTextarea2" rows="2" disabled
+                                                >I am expecting this, that, etc.
+                                                </textarea>
+                                            </div>
+                    
+                                            <div class="form-check mb-3">
+                                                <input class="form-check-input is-invalid" type="checkbox" disabled id="invalidCheck4" aria-describedby="invalidCheck4Feedback">
+                                                <label class="form-check-label" for="invalidCheck4">I wish to be re-assigned</label>
+                                            </div>
+                                        </form>
+        
+                                        <table class="table">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Timestamp</th>
+                                                <th scope="col">Censor Log Entry</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row">1</th>
+                                                    <td>12th April 2022 at 11:24PM</td>
+                                                    <td>censored image of "violence-gore" (73% confidence level)</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">2</th>
+                                                    <td>12th April 2022 at 11:24PM</td>
+                                                    <td>...</td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">3</th>
+                                                    <td>27th April 2022 at 12:00PM</td>
+                                                    <td>censored image of "violence-gore" (42% confidence level)</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <div class="text-center pt-2">
+                                            <button class="btn btn-info" id="chtbtn" onclick="openChatLog()">View Chat log >></button>
+                                            <script>
+                                                function openChatLog() {
+                                                    var chatlog = document.getElementById("chats");
+                                                    if ( chatlog.hidden ) {
+                                                        let person = prompt("Please enter your authorisation code:", "");
+                                                        if (person != null || person != "") {
+                                                            chatlog.hidden = false;
+                                                            document.getElementById("chtbtn").disabled = true;
+                                                        }
+                                                    }
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+        
+                                    <div class="col-6 overflow-scroll">
+                                        <div id="chats" hidden>
+                                            <div class="d-flex justify-content-between">
+                                                <h6>Volunteer X</h6>
+                                                <h6>Client Y</h6>
+                                            </div>
+                                            <div class="chat-panel mt-auto" style="background-color: #eaf5e4;">
+                                                <div class="row no-gutters">
+                                                    <div class="col-lg-6 col-md-8">
+                                                        <div class="chat-bubble chat-bubble--left">
+                                                            Hello!
+                                                            <br><small class="text muted">21 Apr 10:30PM</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row no-gutters">
+                                                    <div class="col-lg-6 col-md-8">
+                                                        <div class="chat-bubble chat-bubble--left">
+                                                            How are you doing today?
+                                                            <br><small class="text muted">21 Apr 10:32PM</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row no-gutters">
+                                                    <div class="col-lg-6 col-md-8">
+                                                        <div class="chat-bubble chat-bubble--left">
+                                                            Have a bird<br>
+                                                            <img src="images/icons/bird.jpg" alt="" height="120px">
+                                                            <br><small class="text muted">21 Apr 10:44PM</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row no-gutters">
+                                                    <div class="col-lg-6 col-md-8">
+                                                        <div class="chat-bubble chat-bubble--left">
+                            
+                                                            <div id="censoredImageText" class="bg-dark p-3 m-2 rounded bg-opacity-50">
+                                                                <div class="text-center text-light">
+                                                                    <p class="m-0">WARNING: This image has been censored by our AI</p>
+                                                                    <p class="mt-2 mb-3 text-warning">detected: violence, fire</p>
+                                                                    <button class="btn btn-sm rounded-pill btn-danger bg-opacity-50" onclick="myFunction()">click to unblur</button>
+                                                                </div>
+                                                            </div>
+                            
+                                                            <div id="censoredImage" style="display: none;">
+                                                                <img src="images/icons/fire.jpg" height="120px" alt="">
+                                                                <button class="btn btn-sm rounded-pill btn-danger bg-opacity-50 ms-auto" onclick="myFunction()">hide image</button>
+                                                                <br><small class="text muted">21 Apr 10:45PM</small>
+                                                            </div>
+                            
+                                                            <script>
+                                                                function myFunction() {
+                                                                    var x = document.getElementById("censoredImageText");
+                                                                    var y = document.getElementById("censoredImage");
+                            
+                                                                    if (x.style.display === "none") {
+                                                                        x.style.display = "block";
+                                                                        y.style.display = "none";
+                                                                    } else {
+                                                                        x.style.display = "none";
+                                                                        y.style.display = "block";
+                                                                    }
+                                                                }
+                                                            </script>
+                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row no-gutters">
+                                                    <div class="col-md-8 col-lg-6 offset-md-4 offset-lg-6">
+                                                        <div class="chat-bubble chat-bubble--right">
+                                                            aaaaaaaaaa
+                                                            <br><small class="text muted">21 Apr 10:55PM</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                            </div>
+            
+                            <div class="modal-footer mt-3">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary px-4" data-bs-toggle="modal" data-bs-target="#reportHandle2">  Handle this report  </button>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+        
+                <div class="modal fade border-rounded" id="reportHandle2" tabindex="-1" aria-labelledby="reportHandle2Label" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable modal-xl modal-dialog-centered">
+            
+                        <div class="modal-content px-5 py-3">
+                            <div class="modal-header">
+                                <div>
+                                    <h5 class="modal-title" id="reportHandle2Label">Client-flagged Report Details</h5>
+                                    <h6 class="m-0 text-muted">Client: Some Other Client<br>Volunteer: Another Volunteer Name</h6>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+            
+                            <div class="modal-body">
+                                <form action="#">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-text">
+                                            <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
+                                        <span class="input-group-text">Ban client</span>
+                                        <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Enter ban period in days">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-text">
+                                            <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
+                                        <span class="input-group-text">Ban volunteer</span>
+                                        <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Enter ban period in days">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-text">
+                                            <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input">
+                                        </div>
+                                        <label class="input-group-text" for="inputGroupSelect01">Re-assign client to</label>
+                                        <select class="form-select" id="inputGroupSelect01">
+                                          <option selected>Choose...</option>
+                                          <option value="1">Volunteer A</option>
+                                          <option value="2">Volunteer B</option>
+                                          <option value="3">Volunteer C</option>
+                                        </select>
+                                      </div>
+        
+                                    <div class="mb-3">
+                                        <label for="msgToVol" class="form-label">Message to Volunteer</label>
+                                        <textarea class="form-control" id="msgToVol" rows="3"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="msgToCli" class="form-label">Message to Client</label>
+                                        <textarea class="form-control" id="msgToCli" rows="3" ></textarea>
+                                    </div>
+        
+                                    <div class="mb-3">
+                                        <label for="msgComm" class="form-label">Comments (for internal use)</label>
+                                        <textarea class="form-control" id="msgComm" rows="1" ></textarea>
+                                    </div>
+        
+                                    <div class="form-check mt-5 mb-2">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            I have given this report the thorough consideration it deserves <br>
+                                            and have judged both parties fairly.
+                                        </label>
+                                      </div>
+                                </form>
+                            </div>
+            
+                            <div class="modal-footer mt-3">
+                                <button type="button" class="btn btn-secondary px-4" data-bs-toggle="modal" data-bs-target="#report2">  &leftarrow; Back  </button>
+                                <button type="button" class="btn btn-success px-4">  Mark as Handled </button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+
+            </section>
+            <!--
+            #####################################################
+            #############  LEAVE APPLICATION TAB ################
+            #####################################################
+            -->
+            <section class="tab-pane" id="leave-application" role="tabpanel" aria-labelledby="leave-application-tab">
+                <div class="head">
+                    <div class="volunteer-search">
+                        <form>
+                            <select class="form-select">
+                                <option value="id">ID</option>
+                                <option value="name">Name</option>
+                            </select>
+                            <input type="text" name="volunteer-name" value="">
+                            <input type="submit" value="Search">
+                        </form>
+                    </div>
+                </div>
+                <div class="application-list">
+                    <table class="table">
+                        <thead>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Volunteer Rating</th>
+                            <th>Leave Start Date</th>
+                            <th>Leave End Date</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1910456</td>
+                                <td>A Name Ahmed</td>
+                                <td><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i
+                                        class="bi-star-fill"></i><i class="bi-star-fill"></i><i
+                                        class="bi-star-fill"></i></td>
+                                <td>leave start</td>
+                                <td>lelave end</td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        See Details
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1910456</td>
+                                <td>A Name Ahmed</td>
+                                <td><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i
+                                        class="bi-star-fill"></i><i class="bi-star-fill"></i><i
+                                        class="bi-star-half"></i></td>
+                                <td>leave start</td>
+                                <td>lelave end</td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        See Details
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1910456</td>
+                                <td>A Name Ahmed</td>
+                                <td><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i
+                                        class="bi-star-fill"></i><i class="bi-star-half"></i></td>
+                                <td>leave start</td>
+                                <td>lelave end</td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        See Details
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1910456</td>
+                                <td>A Name Ahmed</td>
+                                <td><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i class="bi-star-half"></i>
+                                </td>
+                                <td>leave start</td>
+                                <td>lelave end</td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        See Details
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1910456</td>
+                                <td>A Name Ahmed</td>
+                                <td><i class="bi-star-fill"></i><i class="bi-star-fill"></i><i
+                                        class="bi-star-fill"></i><i class="bi-star-fill"></i><i
+                                        class="bi-star-half"></i></td>
+                                <td>leave start</td>
+                                <td>lelave end</td>
+                                <td>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal">
+                                        See Details
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!--######################-->
+                    <!-- SAMPLE LEAVE APPLICATION MODAL -->
+                    <!--######################-->
+                    <div class="modal fade leave-application-modal" id="exampleModal" tabindex="-1"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Urgent Application for Leave</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, voluptate
+                                    distinctio. Et non repellat asperiores dolore dolor, beatae sit pariatur nisi.
+                                    Voluptatibus aut, possimus temporibus in adipisci voluptas tempore quos?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore deleniti dicta
+                                    libero optio repellendus sit enim id! Magni, a fugiat vel culpa molestias
+                                    perferendis corporis id doloribus libero eveniet aut.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, culpa et.
+                                    Reiciendis magni nobis quasi ipsum veritatis ab sint non nesciunt animi quibusdam.
+                                    Accusamus ex blanditiis a delectus neque laborum.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptas
+                                    eligendi at nobis ipsa dolorum consequuntur! Quisquam expedita corporis nulla
+                                    reiciendis praesentium, ratione optio qui. Praesentium quae ut perspiciatis illum.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, fugiat distinctio.
+                                    Voluptatibus deserunt sed architecto, unde provident eos ea aperiam at expedita rem
+                                    asperiores, accusantium impedit, aspernatur veritatis deleniti eius.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus non aperiam
+                                    tempore porro provident a vero quidem sapiente, in fuga quae! Laudantium tenetur
+                                    modi quia temporibus quidem pariatur exercitationem a?
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, voluptate
+                                    distinctio. Et non repellat asperiores dolore dolor, beatae sit pariatur nisi.
+                                    Voluptatibus aut, possimus temporibus in adipisci voluptas tempore quos?
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore deleniti dicta
+                                    libero optio repellendus sit enim id! Magni, a fugiat vel culpa molestias
+                                    perferendis corporis id doloribus libero eveniet aut.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis, culpa et.
+                                    Reiciendis magni nobis quasi ipsum veritatis ab sint non nesciunt animi quibusdam.
+                                    Accusamus ex blanditiis a delectus neque laborum.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptas
+                                    eligendi at nobis ipsa dolorum consequuntur! Quisquam expedita corporis nulla
+                                    reiciendis praesentium, ratione optio qui. Praesentium quae ut perspiciatis illum.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, fugiat distinctio.
+                                    Voluptatibus deserunt sed architecto, unde provident eos ea aperiam at expedita rem
+                                    asperiores, accusantium impedit, aspernatur veritatis deleniti eius.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus non aperiam
+                                    tempore porro provident a vero quidem sapiente, in fuga quae! Laudantium tenetur
+                                    modi quia temporibus quidem pariatur exercitationem a?
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" data-bs-toggle="tab"
+                                    data-bs-target="#volunteer-management" class="btn btn-primary">View Volunteer Profile</button>
+                                    <div class="decision">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Reject</button>
+                                        <button type="button" class="btn btn-primary"
+                                            data-bs-dismiss="modal">Approve</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--
+            #####################################################
+            ##########  QUESTIONNAIRE MANAGEMENT TAB ############
+            #####################################################
+            -->
+            <section class="tab-pane" id="questionnaire-management" role="tabpanel"
+                aria-labelledby="questionnaire-management-tab">
+                <div class="head">
+                    <div class="questionnaire-search">
+                        <form>
+                            <button type="button" class="btn btn-primary btn-border-shadow" data-bs-toggle="modal"
+                                data-bs-target="#add-questionnaire-modal">
+                                Add New Questionnaire
+                            </button>
+                            <hr width="1" size="58" style="padding: 0; margin: 0;">
+                            <select class="form-select">
+                                <option value="all-q">All Questionnaires</option>
+                                <option value="signup-q">Sign Up Questionnaire</option>
+                                <option value="client-del-q">Client Account Deletion Questionnaire</option>
+                                <option value="vounteer-signup">Volunteer Signup Questionnaire</option>
+                                <option value="name">Others</option>
+                            </select>
+                            <input type="text" name="tag" value="" placeholder="Search By Tag">
+                            
+                            <input type="submit" value="Search">
+                        </form>
+                    </div>
+                </div>
+                <div class="modal fade leave-application-modal" id="add-questionnaire-modal" tabindex="-1"
+                    aria-labelledby="add-questionnaire-modalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="add-questionnaire-modalLabel">New Questionnaire
+                                </h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="new-questionnaire-form">
+                                    <div class="form-control">
+                                        <label for="questionnaire-type" id="label-questionnaire-type">
+                                            Questionnaire Type
+                                        </label>
+                                        <select id="questionnaire-type">
+                                            <option value="signup-q">Sign Up Questionnaire</option>
+                                            <option value="client-del-q">Client Account Deletion Questionnaire</option>
+                                            <option value="vounteer-signup">Volunteer Signup Questionnaire</option>
+                                            <option value="name">Others</option>
+                                        </select>
+                                    </div>
+                                    <!-- Details -->
+                                    <div class="form-control">
+                                        <label>
+                                            Want to answer this question?
+                                        </label>
+
+                                        <!-- Input Type Text -->
+                                        <textarea placeholder="Enter your comment here"></textarea>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label>
+                                            Perhaps answer this question?
+                                        </label>
+
+                                        <!-- Input Type Text -->
+                                        <textarea placeholder="Enter your comment here"></textarea>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="age" id="label-age">
+                                            Age
+                                        </label>
+
+                                        <!-- Input Type Text -->
+                                        <input type="text" id="age" placeholder="Enter your age" />
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="role" id="label-role">
+                                            Which option best describes you?
+                                        </label>
+
+                                        <!-- Dropdown options -->
+                                        <select name="role" id="role">
+                                            <option value="student">Student</option>
+                                            <option value="intern">Intern</option>
+                                            <option value="professional">
+                                                Professional
+                                            </option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label>
+                                            Would you recommend [This Website]
+                                            to a friend?
+                                        </label>
+
+                                        <!-- Input Type Radio Button -->
+                                        <div class="radio-group">
+                                            <label for="recommed-1">
+                                                <input type="radio" id="recommed-1" name="recommed">Yes</input>
+                                            </label>
+                                            <label for="recommed-2">
+                                                <input type="radio" id="recommed-2" name="recommed">No</input>
+                                            </label>
+                                            <label for="recommed-3">
+                                                <input type="radio" id="recommed-3" name="recommed">Maybe</input>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label>What are the issues you face?
+                                            <small>(Check all that apply)</small>
+                                        </label>
+                                        <!-- Input Type Checkbox -->
+                                        <div class="checkbox-group">
+                                            <label for="inp-1">
+                                                <input type="checkbox" id="inp-1" name="inp">This Issue</input></label>
+                                            <label for="inp-2">
+                                                <input type="checkbox" id="inp-2" name="inp">Another</input></label>
+                                            <label for="inp-3">
+                                                <input type="checkbox" id="inp-3" name="inp">Another 2</input></label>
+                                            <label for="inp-4">
+                                                <input type="checkbox" id="inp-4" name="inp">Some other</input></label>
+                                            <label for="inp-5">
+                                                <input type="checkbox" id="inp-5" name="inp">Some another</input></label>
+                                            <label for="inp-6">
+                                                <input type="checkbox" id="inp-6" name="inp">Other</input>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-control">
+                                        <label for="comment">
+                                            Any comments or suggestions
+                                        </label>
+
+                                        <!-- multi-line text input control -->
+                                        <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+                                    </div>
+                                    
+
+                                    <!-- Multi-line Text Input Control -->
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary">Add Multiple Choice Radio Button</button>
+                                        <button type="button" class="btn btn-primary">Add Multiple Choice Checkbox</button>
+                                        <button type="button" class="btn btn-primary">Add Short Question</button>
+                                        <button type="button" class="btn btn-primary">Add One Word Answer Question</button>
+                                    </div>
+                                    <div class="form-control">
+                                        <label for="tag" id="label-tag">
+                                            Tags
+                                        </label>
+
+                                        <!-- Input Type Text -->
+                                        <input type="text" id="tag" placeholder="Enter comma separated tags" />
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Save Draft</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Publish</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--
+            #####################################################
+            ###############  CLIENT MANAGEMENT TAB ##############
+            #####################################################
+            -->
+            <section class="tab-pane" id="client-management" role="tabpanel" aria-labelledby="client-management-tab">
+
+            </section>
+            <!--
+            #####################################################
+            ############## VOLUNTEER MANAGEMENT TAB #############
+            #####################################################
+            -->
+            <section class="tab-pane" id="volunteer-management" role="tabpanel"
+                aria-labelledby="volunteer-management-tab">
+
+            </section>
+            <!--
+            #####################################################
+            ###############  SYSTEM STATISTICS TAB ##############
+            #####################################################
+            -->
+            <section class="tab-pane" id="system-statistics" role="tabpanel" aria-labelledby="system-statistics-tab">
+
+            </section>
+        </div>
+
+
+
+
+
+    </main>
+</body>
+
+</html>

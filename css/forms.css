@@ -1,0 +1,29 @@
+section {
+    min-height: 75vh;
+}
+.transbox {
+    background-color: var(--secondary-bg-lightest);
+    border: 1px ridge rgba(240, 248, 255, 0.349);
+    border-radius: 30px;
+}
+
+#contactForm {
+    background-image: url("../images/layout/concert1.jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#loginForm {
+    background-image: url("../images/Others/login.jpeg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#signupForm form{
+    border: var(--border-style-2);
+}

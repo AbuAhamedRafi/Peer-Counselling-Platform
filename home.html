@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/root.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script defer src="js/jquery-3.6.0.min.js"></script>
+    <script defer src="js/form-validation.js"></script>
+
+    <title>HealthyMind | Home</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html">
+                <img src="images/icons/band.png" class="d-inline-block align-text-center" alt="band icon" width="40px">
+                HealthyMind
+            </a>
+
+            <button 
+                class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="chat.html">Chat</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <ul class="navbar-nav end-nav-links">
+                    <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+                    <li class="nav-item dropdown">    
+                        <a
+                            class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" title="account"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                            >
+                            <img src="images/icons/account.png" class="d-inline-block align-text-center icon icon-md" alt="Account">
+                        </a>
+            
+                        <ul class="dropdown-menu dropdown-menu-light dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                            <li><span class="dropdown-item-text text-muted">Account</span></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a data-bs-toggle="modal"
+                                data-bs-target="#login-modal" class="dropdown-item" role="button">Log in</a></li>
+                            <li><a href="signup.html" class="dropdown-item" role="button">Sign up</a></li>                    </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="modal fade login-modal" id="login-modal" tabindex="-1"
+        aria-labelledby="login-modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login-modalLabel">Login
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="login-form">
+                        <div class="form-control">
+                            <label for="emailbox" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailbox" aria-describedby="emailHelp" placeholder="example@email.com" name="email" required>
+                            <div class="invalid-feedback">Please enter a valid email address</div>
+                        </div>
+                        <div class="form-control">
+                            <label for="pwbox" class="form-label">Password</label>
+                            <input 
+                                type="password" class="form-control" aria-describedby="pwHelp" id="pwbox" name="password" 
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required
+                            >
+                            <div class="invalid-feedback">
+                                Please enter a valid password
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-target="signup.html">Sign Up</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Forgot Password</button>
+                    <label for="inp-1">
+                        <input type="checkbox" id="inp-1" name="inp">Remember Me</input>
+                    </label>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="main-banner">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Others/hand-hold.jpg" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Some representative placeholder content for the first slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/Others/hand-reach.jpg" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Some representative placeholder content for the second slide.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/Others/hand-hold.jpg" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Some representative placeholder content for the third slide.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <div class="banner-side-box">
+            <blockquote class="blockquote">
+                <figure class="bg-light p-4"
+                style="border-left: .35rem solid #fcdb5e;">
+                    <i class="fas fa-quote-left fa-2x mb-4" style="color: #fcdb5e;"></i>
+                    <blockquote class="blockquote pb-2">
+                        <p>
+                        Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma -
+                        which is living with the results of other people's thinking. Don't let the noise of others'
+                        opinions drown out your own inner voice. And most important, have the courage to follow your
+                        heart and intuition.
+                        </p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer mb-0">
+                        Steve Jobs in <cite title="Source Title">Source Title</cite>
+                    </figcaption>
+                </figure>
+            </blockquote>
+        </div>
+    </section>
+
+
+
+</body>
+</html>
