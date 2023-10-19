@@ -5,10 +5,6 @@ alt="logo_iub.png" />
 
 **Department of Computer Science & Engineering**
 
-**CSE 307: System Analysis and Design**
-
-**Spring 2022**
-
 
 <img src="./media/image9.png"
 style="width:2.12229in;height:2.12229in" />
